@@ -1,0 +1,3 @@
+ccxt
+aiogram
+aiohttp-socks
