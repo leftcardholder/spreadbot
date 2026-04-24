@@ -1,7 +1,6 @@
 import asyncio
 import ccxt
 from aiogram import Bot
-from aiogram.client.session.aiohttp import AiohttpSession
 from datetime import datetime, timedelta
 
 # --- НАСТРОЙКИ ---
@@ -12,7 +11,6 @@ COOLDOWN_MIN = 10
 PAUSE_BETWEEN_COINS = 0.3
 PAUSE_BETWEEN_ROUNDS = 10
 
-PROXY = "socks5://45.32.39.135:1080"  # твой прокси
 
 SYMBOLS = [
     'BTC/USDT', 'ETH/USDT', 'TON/USDT', 'SOL/USDT', 'ARB/USDT',
@@ -51,8 +49,7 @@ async def fetch_price(name: str, ex, symbol: str):
 
 
 async def check_prices():
-    session = AiohttpSession(proxy=PROXY)
-    bot = Bot(token=API_TOKEN, session=session)
+   bot = Bot(token=API_TOKEN)
 
     print(f"Сканер запущен с прокси: {PROXY}")
     print(f"Монет: {len(SYMBOLS)} | Бирж: {len(EXCHANGES)}")
