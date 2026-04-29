@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 API_TOKEN = '8607275112:AAH72m8L6fgymoo9eotz_udcZJ-B4tFE6-o'
 CHAT_ID = 8331349617
 MIN_SPREAD_NET = 2.5 #Минимальный ЧИСТЫЙ спред после всех комиссий
-COOLDOWN_MIN = 3
+COOLDOWN_MIN = 10
 PAUSE_BETWEEN_COINS = 0.3
 PAUSE_BETWEEN_ROUNDS = 10
 
